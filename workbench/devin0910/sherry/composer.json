@@ -1,0 +1,23 @@
+{
+    "name": "devin0910/sherry",
+    "description": "",
+    "authors": [
+        {
+            "name": "devin_yee",
+            "email": "smartlyfly@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Devin0910\\Sherry\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
