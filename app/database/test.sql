@@ -108,8 +108,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `username`, `is_admin`, `last_login`, `created_at`, `updated_at`) VALUES
-(1, 'mediabeastnz@gmail.com', '$2y$08$shMMMJ8X1Nq6xNL3kS0ddefb3kzV8JdDX1cm7fsOe2RkpuLY7WFG.', 'mediabeastnz', 1, '0000-00-00 00:00:00', '2013-12-13 07:52:57', '2013-12-13 07:52:57'),
-(2, 'example@email.com', '$2y$08$c1BJS2nz1HdZFK3VURbN6.w03fZZCLE1sVm22mtkQIJ2GQ7p4P9ra', 'example', 0, '0000-00-00 00:00:00', '2013-12-13 07:52:57', '2013-12-13 07:52:57');
+(1, 'example@email.com', '$2y$08$c1BJS2nz1HdZFK3VURbN6.w03fZZCLE1sVm22mtkQIJ2GQ7p4P9ra', 'example', 1, '0000-00-00 00:00:00', '2013-12-13 07:52:57', '2013-12-13 07:52:57');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -43,6 +43,8 @@
                         @endif
                       <li><a href="/user/profile" title="Your Profile">{{ Auth::user()->username }}</a></li>
                       <li><a rel="tooltip" href="/logout" title="Logout">Logout</a></li>
+                      @elseif
+                        <li><a rel="tooltip" href="/login" title="Login">Login</a></li>
                       @endif
                       
                     </ul>
