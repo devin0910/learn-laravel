@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.postmarkapp.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return array(
 	|
 	*/
 
-	'port' => 587,
+	'port' => 2525,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'myles@creativefamily.co.nz', 'name' => 'Myles Beardsmore'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => '',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -107,18 +107,5 @@ return array(
 	*/
 
 	'sendmail' => '/usr/sbin/sendmail -bs',
-
-	/*
-	|--------------------------------------------------------------------------
-	| Mail "Pretend"
-	|--------------------------------------------------------------------------
-	|
-	| When this option is enabled, e-mail will not actually be sent over the
-	| web and will instead be written to your application's logs files so
-	| you may inspect the message. This is great for local development.
-	|
-	*/
-
-	'pretend' => false,
 
 );

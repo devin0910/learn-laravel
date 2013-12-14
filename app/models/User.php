@@ -20,6 +20,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password');
 
 	/**
+	 * Define which fields are fillable in the model
+	 * @var array
+	 */
+	protected $fillable = array('email', 'password', 'is_admin');
+
+
+	/**
 	 * Get the unique identifier for the user.
 	 *
 	 * @return mixed
@@ -47,6 +54,20 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function getReminderEmail()
 	{
 		return $this->email;
+	}
+
+	/**
+	 * Determine if user is an admin or not.
+	 *
+	 * @return Boolean
+	 */
+	public function is_admin()
+	{
+		if($this->is_admin == 1){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 }

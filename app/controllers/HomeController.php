@@ -15,10 +15,14 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	/**
+     * The layout that should be used for responses.
+     */
+    protected $layout = 'layouts.main';
+
 	public function showWelcome()
 	{
-		//var_dump(Config::get('app.timezone'));
-		return View::make('hello');
+		$this->layout->content = View::make('welcome');
 	}
 
 }

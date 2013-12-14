@@ -28,8 +28,9 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
-
+	// 'local' => array('your-machine-name'),
+	// 'testing' => array('laravel-blog.local'),
+	'local' => array('laravel-blog.local'),
 ));
 
 /*

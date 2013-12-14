@@ -51,6 +51,31 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+
+    // show different views for different errors, only if debug is FASLE
+	if(Config::get('app.debug') != 1){
+        switch ($code)
+        {
+            case 403:
+                return Response::view('errors.403', array(), 403);
+
+            case 404:
+                return Response::view('errors.404', array(), 404);
+
+            case 500:
+                return Response::view('errors.500', array(), 500);
+
+            default:
+                return Response::view('errors.default', array(), $code);
+        }
+    }
+    
+    
+});
+
+
+App::error(function(AbcException $e, $code) {
+    return "I'm catching a AbcException here!";
 });
 
 /*
@@ -66,7 +91,8 @@ App::error(function(Exception $exception, $code)
 
 App::down(function()
 {
-	return Response::make("Be right back!", 503);
+	//return Response::make("Be right back!", 503);
+	return Response::view('errors.maintenance', array(), 503);
 });
 
 /*
